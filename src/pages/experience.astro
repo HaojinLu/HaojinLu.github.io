@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { experiences } from '../data/experience';
+---
+
+<BaseLayout active="experience" description="Research and technical experience of Haojin Lu.">
+  <div class="page-heading">
+    <p class="eyebrow">Background</p>
+    <h1>Experience</h1>
+    <p>Research and technical experience, with roles and dates listed once verified for public display.</p>
+  </div>
+  <section class="page-list" aria-label="Experience entries">
+    {experiences.length > 0 ? (
+      <ol class="experience-list">
+        {experiences.map((experience) => (
+          <li class="experience-item">
+            <div class="experience-date">{experience.startDate} – {experience.endDate}</div>
+            <div>
+              <h2>{experience.title}</h2>
+              <p class="experience-meta">{experience.organization} · {experience.role}</p>
+              {experience.description && <p>{experience.description}</p>}
+              {experience.url && <a href={experience.url}>Learn more <span aria-hidden="true">↗</span></a>}
+            </div>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <p class="empty-note">Experience details are being prepared for public display.</p>
+    )}
+  </section>
+</BaseLayout>

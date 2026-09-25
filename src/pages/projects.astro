@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectList from '../components/ProjectList.astro';
+import { projects } from '../data/projects';
+---
+
+<BaseLayout active="projects" description="Selected public projects by Haojin Lu, including an academic reading extension and backend contributions to agent-based systems.">
+  <div class="page-heading">
+    <p class="eyebrow">Selected Work</p>
+    <h1>Projects</h1>
+    <p>Public projects that reflect my independent development and backend contributions. Each project links to its repository for implementation details and current limitations.</p>
+  </div>
+  <section aria-label="Selected projects" class="page-list">
+    <ProjectList projects={projects} />
+  </section>
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<div class="project-list">
+  {projects.map((project) => (
+    <article class="project">
+      <div class="project-topline">
+        <h3><a href={project.github} target="_blank" rel="noopener noreferrer">{project.title}<span class="external-mark" aria-hidden="true">↗</span></a></h3>
+        <span class="project-type">{project.type}</span>
+      </div>
+      <p class="project-description">{project.description}</p>
+      <p class="project-role"><span>Role</span> {project.role}</p>
+      <ul class="tag-list" aria-label={`${project.title} topics`}>
+        {project.tags.map((tag) => <li>{tag}</li>)}
+      </ul>
+    </article>
+  ))}
+</div>

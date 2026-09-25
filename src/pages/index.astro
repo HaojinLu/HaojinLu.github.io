@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectList from '../components/ProjectList.astro';
+import { projects } from '../data/projects';
+import { site } from '../data/site';
+
+const featuredProjects = projects.filter((project) => project.featured);
+---
+
+<BaseLayout active="about">
+  <section class="intro" aria-labelledby="home-title">
+    <p class="eyebrow">Undergraduate Student · Sun Yat-sen University</p>
+    <h1 id="home-title">Haojin Lu</h1>
+    <p class="lead">I am an undergraduate student at Sun Yat-sen University, interested in research and engineering across intelligent systems. I build tools and agent-based applications, and I care about clear implementation, careful evaluation, and honest descriptions of what a system can do.</p>
+    <div class="intro-actions">
+      <a class="text-link" href="/projects/">Explore projects <span aria-hidden="true">→</span></a>
+      <a class="text-link muted-link" href="/cv/">CV <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section id="about" class="content-section" aria-labelledby="about-title">
+    <div class="section-heading">
+      <p class="section-kicker">01 / About</p>
+      <h2 id="about-title">About</h2>
+    </div>
+    <div class="section-body prose">
+      <p>My work so far spans academic reading tools and backend development for agent-based systems. I am drawn to questions that connect model capabilities with usable, dependable systems.</p>
+      <div class="education-line">
+        <h3>Education</h3>
+        <p>Sun Yat-sen University <span>· Undergraduate Student</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <p class="section-kicker">02 / Work</p>
+      <h2 id="projects-title">Selected Projects</h2>
+    </div>
+    <div class="section-body">
+      <ProjectList projects={featuredProjects} />
+      <a class="section-more" href="/projects/">View projects <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="content-section" aria-labelledby="interests-title">
+    <div class="section-heading">
+      <p class="section-kicker">03 / Interests</p>
+      <h2 id="interests-title">Research Interests</h2>
+    </div>
+    <div class="section-body">
+      <p class="interest-list">{site.interests.join(' · ')}</p>
+    </div>
+  </section>
+
+  <section class="content-section contact-section" aria-labelledby="contact-title">
+    <div class="section-heading">
+      <p class="section-kicker">04 / Connect</p>
+      <h2 id="contact-title">Contact</h2>
+    </div>
+    <div class="section-body">
+      <p>Find my public work on <a href={site.github} target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>.</p>
+      {site.email && <p>Email: <a href={`mailto:${site.email}`}>{site.email}</a></p>}
+      {site.scholar && <p><a href={site.scholar}>Google Scholar <span aria-hidden="true">↗</span></a></p>}
+      {site.linkedin && <p><a href={site.linkedin}>LinkedIn <span aria-hidden="true">↗</span></a></p>}
+      {site.orcid && <p><a href={site.orcid}>ORCID <span aria-hidden="true">↗</span></a></p>}
+    </div>
+  </section>
+</BaseLayout>

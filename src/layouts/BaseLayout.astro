@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site';
+
+interface Props {
+  description?: string;
+  active?: 'about' | 'projects' | 'experience' | 'cv';
+}
+
+const { description = site.description, active } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const links = [
+  { label: 'About', href: '/#about', key: 'about' },
+  { label: 'Projects', href: '/projects/', key: 'projects' },
+  { label: 'Experience', href: '/experience/', key: 'experience' },
+  { label: 'CV', href: '/cv/', key: 'cv' },
+] as const;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={site.name} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <title>{site.name}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Haojin Lu — home">{site.name}</a>
+        <nav class="nav" aria-label="Main navigation">
+          {links.map((link) => (
+            <a href={link.href} aria-current={active === link.key ? 'page' : undefined}>{link.label}</a>
+          ))}
+        </nav>
+        <a class="header-github" href={site.github} target="_blank" rel="noopener noreferrer" aria-label="Haojin Lu on GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.75-1.32-3.75-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 .1.78 2.09 3.2 1.5.1-.72.4-1.22.72-1.5-2.48-.28-5.08-1.24-5.08-5.53 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.41.11-2.94 0 0 .94-.3 3.08 1.14A10.7 10.7 0 0 1 12 6.39c.95 0 1.9.13 2.8.38 2.14-1.45 3.08-1.14 3.08-1.14.61 1.53.23 2.66.11 2.94.72.78 1.14 1.77 1.14 2.99 0 4.3-2.6 5.25-5.09 5.52.41.36.77 1.05.77 2.12v2.89c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </header>
+    <main id="main-content" class="container main-content">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© {new Date().getFullYear()} Haojin Lu</span>
+        <div class="footer-links">
+          <a href={site.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+          {site.email && <a href={`mailto:${site.email}`}>Email</a>}
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
