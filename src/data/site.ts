@@ -3,11 +3,10 @@ export const site = {
   description:
     'Haojin Lu is an undergraduate student at Sun Yat-sen University, interested in multimodal AI, agents, embodied intelligence, robotics, and AI systems.',
   github: 'https://github.com/HaojinLu',
-  email: null as string | null,
+  email: 'luhj26@mail2.sysu.edu.cn' as string | null,
   scholar: null as string | null,
   linkedin: null as string | null,
   orcid: null as string | null,
-  cvPdf: null as string | null,
   interests: [
     'Multimodal Large Language Models',
     'Multimodal Agents',

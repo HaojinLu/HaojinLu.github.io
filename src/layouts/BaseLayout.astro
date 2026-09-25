@@ -4,7 +4,7 @@ import { site } from '../data/site';
 
 interface Props {
   description?: string;
-  active?: 'about' | 'projects' | 'experience' | 'cv';
+  active?: 'about' | 'projects' | 'experience';
 }
 
 const { description = site.description, active } = Astro.props;
@@ -13,7 +13,6 @@ const links = [
   { label: 'About', href: '/#about', key: 'about' },
   { label: 'Projects', href: '/projects/', key: 'projects' },
   { label: 'Experience', href: '/experience/', key: 'experience' },
-  { label: 'CV', href: '/cv/', key: 'cv' },
 ] as const;
 ---
 

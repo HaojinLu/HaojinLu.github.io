@@ -39,12 +39,11 @@ The repository name must be `HaojinLu.github.io` under the `HaojinLu` account fo
 ## Content Editing
 
 - Edit `src/data/projects.ts` to add or revise projects. Every project has a title, factual description, type, role, tags, GitHub URL, and `featured` flag. Optional fields support a demo, image, and date. The homepage shows featured entries; the Projects page shows all entries.
-- Edit `src/data/experience.ts` only when the role, organization, dates, and public-display permission have been verified. It is intentionally empty for now.
-- Edit `src/data/site.ts` for contact links, research interests, and the CV path. Only add accounts that are confirmed to exist.
-- When a public CV is ready, place it at `public/cv/Haojin-Lu-CV.pdf` and set `cvPdf: '/cv/Haojin-Lu-CV.pdf'` in `src/data/site.ts`.
+- Edit `src/data/experience.ts` to revise verified public experience. The HRI entry is deliberately high-level; do not add unpublished paper details, code, figures, videos, datasets, or study materials. The competition entry is a separate team experience.
+- Edit `src/data/site.ts` for contact links and research interests. Only add accounts that are confirmed to exist.
 - Page text lives in `src/pages/`; shared styling lives in `src/styles/global.css`.
 
-Do not add unpublished materials or unverified achievements, affiliations, publications, performance claims, or demo links.
+Only add research materials and claims that the site owner has approved for public display. Keep the Experience entries high level.
 
 ## Project Structure
 
@@ -52,12 +51,12 @@ Do not add unpublished materials or unverified achievements, affiliations, publi
 .
 ├── .github/workflows/deploy.yml  # GitHub Pages deployment
 ├── astro.config.mjs              # Astro site URL and static output
-├── public/                       # Favicon, robots.txt, future CV PDF
+├── public/                       # Favicon and robots.txt
 ├── src/
 │   ├── components/               # Shared project rendering
 │   ├── data/                     # Project, experience, and site data
 │   ├── layouts/                  # Shared page shell and metadata
-│   ├── pages/                    # Home, projects, experience, CV, sitemap
+│   ├── pages/                    # Home, projects, experience, sitemap
 │   └── styles/                   # Responsive global styles
 └── package.json
 ```

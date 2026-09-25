@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectList from '../components/ProjectList.astro';
+import ExperienceList from '../components/ExperienceList.astro';
 import { projects } from '../data/projects';
+import { experiences } from '../data/experience';
 import { site } from '../data/site';
 
 const featuredProjects = projects.filter((project) => project.featured);
@@ -14,7 +16,6 @@ const featuredProjects = projects.filter((project) => project.featured);
     <p class="lead">I am an undergraduate student at Sun Yat-sen University, interested in research and engineering across intelligent systems. I build tools and agent-based applications, and I care about clear implementation, careful evaluation, and honest descriptions of what a system can do.</p>
     <div class="intro-actions">
       <a class="text-link" href="/projects/">Explore projects <span aria-hidden="true">→</span></a>
-      <a class="text-link muted-link" href="/cv/">CV <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -43,9 +44,20 @@ const featuredProjects = projects.filter((project) => project.featured);
     </div>
   </section>
 
+  <section class="content-section" aria-labelledby="experience-title">
+    <div class="section-heading">
+      <p class="section-kicker">03 / Experience</p>
+      <h2 id="experience-title">Research &amp; Technical Experience</h2>
+    </div>
+    <div class="section-body">
+      <ExperienceList experiences={experiences} />
+      <a class="section-more" href="/experience/">View experience <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
   <section class="content-section" aria-labelledby="interests-title">
     <div class="section-heading">
-      <p class="section-kicker">03 / Interests</p>
+      <p class="section-kicker">04 / Interests</p>
       <h2 id="interests-title">Research Interests</h2>
     </div>
     <div class="section-body">
@@ -55,7 +67,7 @@ const featuredProjects = projects.filter((project) => project.featured);
 
   <section class="content-section contact-section" aria-labelledby="contact-title">
     <div class="section-heading">
-      <p class="section-kicker">04 / Connect</p>
+      <p class="section-kicker">05 / Connect</p>
       <h2 id="contact-title">Contact</h2>
     </div>
     <div class="section-body">

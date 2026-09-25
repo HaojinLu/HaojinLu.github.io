@@ -1,0 +1,25 @@
+---
+import type { Experience } from '../data/experience';
+
+interface Props {
+  experiences: Experience[];
+  headingLevel?: 2 | 3;
+}
+
+const { experiences, headingLevel = 3 } = Astro.props;
+const Heading = headingLevel === 2 ? 'h2' : 'h3';
+---
+
+<ol class="experience-list">
+  {experiences.map((experience) => (
+    <li class="experience-item">
+      <div class="experience-date">{experience.period ?? 'Research'}</div>
+      <div>
+        <Heading>{experience.title}</Heading>
+        <p class="experience-meta"><span class="experience-context">{experience.context}</span> · {experience.role}</p>
+        <p class="experience-description">{experience.description}</p>
+        {experience.url && <a href={experience.url} target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>}
+      </div>
+    </li>
+  ))}
+</ol>

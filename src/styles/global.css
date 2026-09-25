@@ -82,11 +82,15 @@ h2 { font-size: 1.55rem; line-height: 1.28; letter-spacing: -.035em; font-weight
 .button-link { display: inline-flex; align-items: center; gap: 17px; color: #fff; background: var(--blue-dark); padding: 12px 17px; font-size: .92rem; font-weight: 650; border-radius: 3px; }
 .button-link:hover { color: #fff; background: #123c66; text-decoration: none; }
 .experience-list { list-style: none; padding: 0; margin: 0; }
-.experience-item { display: grid; grid-template-columns: 180px 1fr; gap: 26px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.experience-item { display: grid; grid-template-columns: 135px 1fr; gap: 26px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.experience-item:first-child { padding-top: 0; }
+.experience-item:last-child { border-bottom: 0; }
 .experience-date { color: var(--soft); font-size: .85rem; }
-.experience-item h2 { font-size: 1.15rem; margin-bottom: 6px; }
+.experience-item h2, .experience-item h3 { font-size: 1.13rem; margin-bottom: 8px; letter-spacing: -.02em; }
 .experience-item p { color: var(--muted); line-height: 1.7; }
-.experience-meta { font-size: .9rem; }
+.experience-meta { font-size: .88rem; margin-bottom: 11px; }
+.experience-context { color: var(--ink); font-weight: 600; }
+.experience-description { font-size: .94rem; margin-bottom: 0; }
 
 .site-footer { border-top: 1px solid var(--line); }
 .footer-inner { min-height: 98px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--soft); font-size: .81rem; }
