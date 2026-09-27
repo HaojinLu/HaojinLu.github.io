@@ -12,10 +12,10 @@ export interface Experience {
 export const researchExperience: Experience = {
   title: 'Human–Robot Interaction with Humanoid Robots',
   context: 'Research project',
-  role: 'Robotics Systems · HRI Study Design',
+  role: 'Robotics Systems · HRI Evaluation',
   url: 'https://github.com/HaojinLu/human-robot-interaction',
   description:
-    'Developed and debugged whole-body interaction on Unitree G1, tested motions on the physical robot, and led HRI study design and analysis. Manuscript under review.',
+    'Developed and debugged whole-body interaction on Unitree G1, tested motions on the physical robot, and designed the HRI evaluation questionnaire and conducted statistical analysis. Manuscript under review.',
 };
 
 export const roboticsExperience: Experience = {
