@@ -10,9 +10,10 @@ export interface Experience {
 // Keep public descriptions at the level cleared for disclosure. Do not add
 // unpublished titles, figures, code, experimental materials, or numerical results.
 export const researchExperience: Experience = {
-  title: 'Humanoid Interaction Research',
+  title: 'Human–Robot Interaction with Humanoid Robots',
   context: 'Research project',
   role: 'Research Contributor · Robotics Systems Integration',
+  url: 'https://github.com/HaojinLu/human-robot-interaction',
   description:
     'Research on natural-language-driven whole-body humanoid interaction using Unitree G1, including motion deployment, system integration, real-robot testing, and HRI user evaluation. Manuscript under review.',
 };
