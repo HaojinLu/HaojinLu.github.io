@@ -15,7 +15,7 @@ export const researchExperience: Experience = {
   role: 'Robotics Systems · HRI Evaluation',
   url: 'https://github.com/HaojinLu/human-robot-interaction',
   description:
-    'Developed and debugged whole-body interaction on Unitree G1, tested motions on the physical robot, and designed the HRI evaluation questionnaire and conducted statistical analysis. Manuscript under review.',
+    'Integrated SONIC and BONES-SEED with Unitree G1, tested motions on the physical robot, provided experimental data, designed the HRI evaluation questionnaire, conducted statistical analysis, and created manuscript figures. Manuscript under review.',
 };
 
 export const roboticsExperience: Experience = {
@@ -25,7 +25,7 @@ export const roboticsExperience: Experience = {
   url: 'https://github.com/HaojinLu/world-humanoid-robot-games-2026',
   period: 'Aug 2026',
   description:
-    'Led the team and contributed to Unitree G1 technical development and testing. The team reported a Top 16 finish in Street Dance and placed 11th in Tai Chi.',
+    'Led the team and contributed to Unitree G1 technical development and testing. Top 16 in Street Dance and 11th in Tai Chi.',
 };
 
 export const experiences: Experience[] = [researchExperience, roboticsExperience];
