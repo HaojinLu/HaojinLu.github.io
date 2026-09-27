@@ -4,11 +4,11 @@ import ProjectList from '../components/ProjectList.astro';
 import { projects } from '../data/projects';
 ---
 
-<BaseLayout active="projects" description="Selected engineering projects by Haojin Lu, including an independent research tool and backend contributions to agent-based systems.">
+<BaseLayout active="projects" description="Selected robotics and AI engineering projects by Haojin Lu, with clearly stated contribution and release scope.">
   <div class="page-heading">
     <p class="eyebrow">Selected Work</p>
-    <h1>Engineering Projects</h1>
-    <p>Public projects that reflect my independent development and backend contributions. Each project links to its repository for implementation details and current limitations.</p>
+    <h1>Selected Projects</h1>
+    <p>Public projects covering humanoid robotics, independent development, and backend contributions. Each repository states its contribution and what material is available.</p>
   </div>
   <section aria-label="Selected projects" class="page-list">
     <ProjectList projects={projects} />

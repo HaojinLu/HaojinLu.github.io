@@ -22,9 +22,10 @@ export const roboticsExperience: Experience = {
   title: '2026 World Humanoid Robot Games',
   context: '超能逸仙队',
   role: 'Team Lead · Technical Integration',
-  period: 'Jul–Aug 2026',
+  url: 'https://github.com/HaojinLu/world-humanoid-robot-games-2026',
+  period: 'Aug 2026',
   description:
-    'Led team coordination and technical integration for Unitree G1 participation. The team reached the Top 16 in Street Dance and placed 11th in Tai Chi.',
+    'Led team coordination and technical integration for Unitree G1 participation. The team reported a Top 16 finish in Street Dance and placed 11th in Tai Chi.',
 };
 
 export const experiences: Experience[] = [researchExperience, roboticsExperience];

@@ -14,6 +14,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'world-humanoid-robot-games-2026',
+    title: '2026 World Humanoid Robot Games',
+    description:
+      'A public overview of Unitree G1 motion integration, deployment, and real-robot testing for 超能逸仙队. The full competition code and motion assets are not released.',
+    type: 'Competition Project',
+    role: 'Team Lead / Technical Integration',
+    tags: ['Unitree G1', 'Humanoid robotics', 'System integration'],
+    github: 'https://github.com/HaojinLu/world-humanoid-robot-games-2026',
+    featured: false,
+  },
+  {
     slug: 'arxiv-paper-agent',
     title: 'arxiv_paper_agent',
     description:
