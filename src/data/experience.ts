@@ -7,22 +7,23 @@ export interface Experience {
   url?: string;
 }
 
-// Keep descriptions at the level cleared for public display. Do not add
-// unpublished research details, internal code, figures, or study materials.
-export const experiences: Experience[] = [
-  {
-    title: 'Human–Robot Interaction Research',
-    context: 'Collaborative research project',
-    role: 'Research Contributor · Robotics Systems Integration',
-    description:
-      'Contributed to humanoid robot system integration and testing in a collaborative HRI research project.',
-  },
-  {
-    title: '2026 World Humanoid Robot Games',
-    context: '超能逸仙队',
-    role: 'Team Lead · Technical Integration',
-    period: 'Jul–Aug 2026',
-    description:
-      'Led team coordination and contributed to humanoid robot technical integration and testing for competition. The team reached the top 16 in street dance and placed 11th in Tai Chi.',
-  },
-];
+// Keep public descriptions at the level cleared for disclosure. Do not add
+// unpublished titles, figures, code, experimental materials, or numerical results.
+export const researchExperience: Experience = {
+  title: 'Humanoid Interaction Research',
+  context: 'Research project',
+  role: 'Research Contributor · Robotics Systems Integration',
+  description:
+    'Research on natural-language-driven whole-body humanoid interaction using Unitree G1, including motion deployment, system integration, real-robot testing, and HRI user evaluation. Manuscript under review.',
+};
+
+export const roboticsExperience: Experience = {
+  title: '2026 World Humanoid Robot Games',
+  context: '超能逸仙队',
+  role: 'Team Lead · Technical Integration',
+  period: 'Jul–Aug 2026',
+  description:
+    'Led team coordination and technical integration for Unitree G1 participation. The team reached the Top 16 in Street Dance and placed 11th in Tai Chi.',
+};
+
+export const experiences: Experience[] = [researchExperience, roboticsExperience];

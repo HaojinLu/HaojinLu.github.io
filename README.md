@@ -39,7 +39,7 @@ The repository name must be `HaojinLu.github.io` under the `HaojinLu` account fo
 ## Content Editing
 
 - Edit `src/data/projects.ts` to add or revise projects. Every project has a title, factual description, type, role, tags, GitHub URL, and `featured` flag. Optional fields support a demo, image, and date. The homepage shows featured entries; the Projects page shows all entries.
-- Edit `src/data/experience.ts` to revise verified public experience. The HRI entry is deliberately high-level; do not add unpublished paper details, code, figures, videos, datasets, or study materials. The competition entry is a separate team experience.
+- Edit `src/data/experience.ts` to revise verified public experience. The HRI entry uses only the approved public summary and notes that the manuscript is under review; do not add its full title, unpublished results, code, figures, or study materials. The competition entry is a separate team experience.
 - Edit `src/data/site.ts` for contact links and research interests. Only add accounts that are confirmed to exist.
 - Page text lives in `src/pages/`; shared styling lives in `src/styles/global.css`.
 

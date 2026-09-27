@@ -4,15 +4,16 @@ import { site } from '../data/site';
 
 interface Props {
   description?: string;
-  active?: 'about' | 'projects' | 'experience';
+  active?: 'about' | 'research' | 'projects' | 'experience';
 }
 
 const { description = site.description, active } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const links = [
   { label: 'About', href: '/#about', key: 'about' },
-  { label: 'Projects', href: '/projects/', key: 'projects' },
+  { label: 'Research', href: '/#research', key: 'research' },
   { label: 'Experience', href: '/experience/', key: 'experience' },
+  { label: 'Projects', href: '/projects/', key: 'projects' },
 ] as const;
 ---
 
