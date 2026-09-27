@@ -17,7 +17,7 @@ export const projects: Project[] = [
     slug: 'world-humanoid-robot-games-2026',
     title: '2026 World Humanoid Robot Games',
     description:
-      'A public overview of Unitree G1 motion development, deployment, and real-robot testing for 超能逸仙队. Selected development-machine scripts are public; the full competition stack and motion assets are not released.',
+      'Unitree G1 motion development, deployment, and real-robot testing with 超能逸仙队. Selected development-machine scripts are available.',
     type: 'Competition Project',
     role: 'Team Lead / Technical Development',
     tags: ['Unitree G1', 'Humanoid robotics', 'Technical development'],
